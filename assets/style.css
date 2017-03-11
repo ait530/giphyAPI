@@ -1,6 +1,6 @@
 body {
 
-  background-color: gray;
+  background-color: white;
 
 }
 
@@ -9,7 +9,7 @@ body {
 
 .jumbotron {
 
-  background-color:blue;
+  background-color:green;
   color:white;
 
 }
@@ -21,3 +21,51 @@ body {
 
 
 }
+
+
+ 
+ 
+ 
+#add-topic
+
+{
+
+  border-color: teal;
+  background-color:teal;
+  color:white;
+
+
+  
+}
+
+
+.topic {
+
+
+
+  border-color: teal;
+  background-color:teal;
+  color:white;
+  border-radius:10px;
+  margin-right: 10px;
+
+
+}
+
+
+#topic-form {
+  
+  height:100px;
+  float: right;
+  margin-top: 25px;
+
+  background-color:yellow;
+}
+
+
+#topic-input {
+
+  width:200px;
+
+}
+
