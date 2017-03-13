@@ -1,1 +1,1 @@
-# giphyAPI
+# giphyAPI Homework
