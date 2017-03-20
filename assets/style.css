@@ -5,6 +5,15 @@ body {
 }
 
 
+p {
+
+  font-family: times;
+  font-size: 25px;
+
+
+}
+
+
 
 
 .jumbotron {
@@ -73,7 +82,7 @@ body {
 #gifs-appear-here {
 
   float:left;
-  background-color: red;
+  
 
 }
 
