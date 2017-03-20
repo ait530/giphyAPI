@@ -19,6 +19,7 @@ $( document ).ready(function(){
     "pig"];
 
 
+
   
 
   // Function for dumping JSON content for each button into the div and displaying it.
@@ -37,16 +38,38 @@ $( document ).ready(function(){
       method: "GET"
     }).done(function(response) {
 
-      // 
-      $("#gifs-appear-here").html(JSON.stringify(response.data));
+      renderGifs(response.data);
+      // $("#gifs-appear-here").html(JSON.stringify(response.data));
         renderButtons();
       });
-  // end of diplayTopicInfo function
+  }
+
+  
+
+  // Function for rendering the gifData URLs from the object
+  function renderGifs(gifData) {
+    
+    for (var i = 0; i < gifData.length; i++) {
+      console.log(gifData[i]);
+
+      // Perfoming an AJAX GET request to our queryURL
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+
+      // After the data from the AJAX request comes back
+      .done(function(gifData) {
+
+
+      // bitly url refer to it.
+      renderGifs();
+    })
+
   }
 
 
 
-  
   // Function for displaying animal data
   function renderButtons() {
 
