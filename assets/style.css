@@ -74,13 +74,19 @@ p {
   height:100px;
   float: right;
   margin-top: 25px;
+  font-size:30px;
 
 }
 
 
 #topic-input {
 
-  width:200px;
+  width:300px;
+
+}
+
+#add-topic {
+  border-radius:20px;
 
 }
 
