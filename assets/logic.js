@@ -1,11 +1,11 @@
 // The ready event occurs when the DOM (document object model) has been loaded.
 $(document).ready(function(){
 
-// =========================
-// SETUP VARIABLES
-// =========================
+  // =========================
+  // SETUP VARIABLES
+  // =========================
 
-// topics variable equates to an array of strings that consist of animals
+  // topics variable equates to an array of strings that consist of animals
   var topics = ["dog",
     "cat",
     "rabbit",
