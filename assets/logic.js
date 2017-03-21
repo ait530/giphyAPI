@@ -58,23 +58,23 @@ $(document).ready(function(){
 
 
   
-  // $("gifs-appear-here").on("click", function() {
-  //   // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-  //   var state = $(this).attr("data-state");
-  //   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-  //   // Then, set the image's data-state to animate
-  //   // Else set src to the data-still value
-  //   if (state === "still") {
-  //       $(this).attr("src", $(this).attr("data-animate"));
-  //       $(this).attr("data-state", "animate");
-  //   } 
-  //   else {
-  //       $(this).attr("src", $(this).attr("data-still"));
-  //       $(this).attr("data-state", "still");
-  //     }
-  //   })
+  // Gif image click function to switch between still and animate states.
+  $("<img>").on("click", function(gifsClick) {
+    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    var state = $(this).attr("data-state");
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).attr("data-state", "animate");
+    } 
+    else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).attr("data-state", "still");
+      }
+    })
   
-  // })
 
 
   // This function handles events where one button is clicked
@@ -94,7 +94,6 @@ $(document).ready(function(){
     // Calling renderButtons which handles the processing of our topics array
     renderButtons();
   })
-
 
 
 
@@ -123,7 +122,6 @@ $(document).ready(function(){
   }
 
   
- 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
   $(document).on("click", ".topic", gifsClick);
