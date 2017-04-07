@@ -61,6 +61,7 @@ $(document).ready(function(){
     })
   // end of gifsClick function
   }
+  // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
 
   // Gif image click function to switch between still and animate states.
