@@ -1,56 +1,37 @@
 body {
-
+  
   background-color: white;
 
 }
 
-
 p {
-
+  
   font-family: times;
   font-size: 25px;
-
-
 }
-
-
-
 
 .jumbotron {
 
   background-color:green;
   color:white;
-
 }
-
 
 .fore-group {
   
   color:white;
-
-
 }
 
 
- 
- 
- 
 #add-topic
-
 {
 
   border-color: teal;
   background-color:teal;
   color:white;
-
-
   
 }
 
-
 .topic {
-
-
 
   border-color: teal;
   background-color:teal;
@@ -58,16 +39,11 @@ p {
   border-radius:10px;
   margin-right: 10px;
 
-
 }
-
-
 
 #topics-view {
-
   margin-bottom:50px;: 
 }
-
 
 #topic-form {
   
@@ -78,24 +54,20 @@ p {
 
 }
 
-
 #topic-input {
-
+  
   width:300px;
 
 }
 
 #add-topic {
+
   border-radius:20px;
 
 }
 
-
 #gifs-appear-here {
 
   float:left;
-
-  
-
 }
 

@@ -1,12 +1,12 @@
 // The ready event occurs when the DOM (document object model) has been loaded.
-$(document).ready(function(){
+$(document).ready(function() {
 
   // =========================
   // SETUP VARIABLES
   // =========================
-
-  // topics variable equates to an array of strings that consist of animals
-  var topics = ["dog",
+  // Topics variable array of animals to send to api
+  var topics = [
+    "dog",
     "cat",
     "rabbit",
     "hamster",
@@ -16,13 +16,13 @@ $(document).ready(function(){
     "ferret",
     "turtle",
     "hedgehog",
-    "pig"];
+    "pig"
+    ];
 
 
   // =========================
   // FUNCTIONS
   // =========================
-  
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
-      topics + "&api_key=dc6zaTOxFJmzC&limit=10&rating";
+      topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
    
     // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal button being clicked
     $.ajax({
@@ -56,7 +56,6 @@ $(document).ready(function(){
   // end of gifsClick function
   }
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
-
 
   
   // Gif image click function to switch between still and animate states.
@@ -130,5 +129,6 @@ $(document).ready(function(){
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
 
-
 });
+
+// I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
