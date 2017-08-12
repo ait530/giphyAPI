@@ -31,7 +31,6 @@ $(document).ready(function() {
     var topics = $(this).attr("data-name");
 
 
-
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
       topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
