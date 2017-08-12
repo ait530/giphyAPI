@@ -26,8 +26,11 @@ $(document).ready(function() {
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
 
+
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
+
+
 
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
@@ -87,10 +90,15 @@ $(document).ready(function() {
     // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
     var topic = $("#topic-input").val().trim();
 
-    // Adding the animal from the textbox to our array
-    topics.push(topic);
-    // console.log(topics);
-
+    if (topic.length !== 0) {
+      // Adding the input from the textbox to our array
+      topics.push(topic);
+      // console.log(topics);
+    } 
+    else {
+      console.log('error, no input');
+    }
+    
     // Calling renderButtons which handles the processing of our topics array
     renderButtons();
   })
