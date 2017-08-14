@@ -124,6 +124,14 @@ $(document).ready(function() {
     }
   }
 
+
+  // function deleteOldGifs() {
+  //   if (renderButtons()) {
+      
+  //     $("#topics-view").empty();
+  //     a.empty();
+  //   }
+  // }
   
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
