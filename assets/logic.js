@@ -19,17 +19,14 @@ $(document).ready(function() {
     "pig"
     ];
 
-
   // =========================
   // FUNCTIONS
   // =========================
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
 
-
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
-
 
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
@@ -101,7 +98,6 @@ $(document).ready(function() {
     // Calling renderButtons which handles the processing of our topics array
     renderButtons();
   })
-
 
 
   // Function for displaying new animal data
