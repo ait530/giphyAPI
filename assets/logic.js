@@ -125,13 +125,11 @@ $(document).ready(function() {
   }
 
 
-  // function deleteOldGifs() {
-  //   if (renderButtons()) {
-      
-  //     $("#topics-view").empty();
-  //     a.empty();
-  //   }
-  // }
+  function deleteOldGifs() {
+    $("delete-topic").on("click", function(gifsClick) {
+      $("#gifs-appear-here").empty();
+    })
+  }
   
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
