@@ -58,7 +58,12 @@ $(document).ready(function() {
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
 
-  //NEED To Fix render images function
+  /*
+  1) NEED To Fix render images function
+  2) Add a function that prevents duplicate buttons  
+
+  */
+
   function renderImages() {
     // Gif image click function to switch between still and animate states.
     $("<img>").on("click", function(gifsClick) {
