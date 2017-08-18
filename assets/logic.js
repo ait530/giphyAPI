@@ -48,6 +48,7 @@ $(document).ready(function() {
         animalDiv.append(animalImage);
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
+
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
       }
@@ -75,7 +76,6 @@ $(document).ready(function() {
       })
     }
 
-
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
     // event.preventDefault() prevents the form from trying to submit itself.
@@ -99,10 +99,8 @@ $(document).ready(function() {
     renderButtons();
   })
 
-
   // Function for displaying new animal data
   function renderButtons() {
-
     // Deleting the buttons prior to adding new topics
     // (this is necessary otherwise you will have repeat buttons)
     $("#topics-view").empty();
@@ -124,20 +122,15 @@ $(document).ready(function() {
     }
   }
 
-
-  function deleteOldGifs() {
+  function deleteGifs() {
     $("delete-topic").on("click", function(gifsClick) {
       $("#gifs-appear-here").empty();
     })
   }
-  
+
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
   $(document).on("click", ".topic", gifsClick);
-
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
-
 });
-
-// I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
