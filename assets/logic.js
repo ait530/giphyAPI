@@ -57,6 +57,8 @@ $(document).ready(function() {
   }
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
+
+  //NEED To Fix render images function
   function renderImages() {
     // Gif image click function to switch between still and animate states.
     $("<img>").on("click", function(gifsClick) {
@@ -92,7 +94,7 @@ $(document).ready(function() {
       // console.log(topics);
     } 
     else {
-      console.log('error, no input');
+      console.log('error, no topic/string inputted');
     }
     
     // Calling renderButtons which handles the processing of our topics array
