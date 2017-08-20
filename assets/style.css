@@ -1,5 +1,7 @@
+
+
 body {
-  background-color: white;
+  background-color: gray;
 }
 
 p {
@@ -60,12 +62,17 @@ p {
 #gifs-appear-here {
   float:left;
   color:white;
+  border-style:black;
 }
 
+#instructions {
+  color:white;
+}
 
 .panel-footer {
   background-color:black;
   color:white;
+  text-align: center;
 }
 
 .container-fluid {
