@@ -11,45 +11,44 @@
 
 <body>
   <!-- Contains all elements -->
-  <div class="container">
+  <div class="container-fluid">
+  
     <nav class="navbar navbar-inverse">
-    <!-- Main header -->
-    <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><h1>Animal Gifs Generator</h1></a>
-    </div>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"  href="#" style="color:white;"><h1>Animal Gifs Generator</h1></a>
+      </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      
-      <!-- Input area + input box + input label + submit button -->
-      <form class="navbar-form navbar-left">
-        <!-- input box -->
-        <input type="text" id="topic-input" style="width: 300px;"><br></br></input>
-        <!-- Button triggers new topic(animal button) to be added -->
-        <input id="add-topic" type="submit" value="Add Gifs"></input>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        
+        <!-- Input area + input box + input label + submit button -->
+        <form class="navbar-form navbar-left">
+          <!-- input box -->
+          <input type="text" id="topic-input" style="width: 300px;"><br></br></input>
+          <!-- Button triggers new topic(animal button) to be added -->
+          <input id="add-topic" type="submit" value="Add Gifs"></input>
 
-        <input id="delete-topic" type="submit" value="Delete Gifs"></input> 
-      </form>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+          <input id="delete-topic" type="submit" value="Delete Gifs"></input> 
+        </form>
+      </div><!-- /.navbar-collapse -->
     </nav>
-
+   
     <!-- Animal/topic buttons located here -->
     <div id="topics-view"></div>
 
     <!-- Gifs displayed here -->
     <div id="gifs-appear-here"></div>
-  
+   
   </div>
-
+  
+  <div class="panel-footer">Click a button above!</div>
   <!-- jQuery  -->
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"

@@ -59,5 +59,15 @@ p {
 
 #gifs-appear-here {
   float:left;
+  color:white;
 }
 
+
+.panel-footer {
+  background-color:black;
+  color:white;
+}
+
+.container-fluid {
+  background-color: gray;
+}
