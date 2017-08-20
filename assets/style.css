@@ -24,8 +24,8 @@ p {
 }
 
 .topic {
-  border-color: teal;
-  background-color:teal;
+  border-color: black;
+  background-color: black;
   color:white;
   border-radius:10px;
   margin-right: 10px;
@@ -42,9 +42,9 @@ p {
   font-size:30px;
 }
 
-#topic-input {
+/*#topic-input {
   width:300px;
-}
+}*/
 
 #add-topic {
   border-radius:20px;
