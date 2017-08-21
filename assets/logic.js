@@ -32,9 +32,8 @@ $(document).ready(function() {
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
       topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
 
-
     instructions();
-   
+
     // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal button being clicked
 
     $.ajax({
@@ -48,16 +47,19 @@ $(document).ready(function() {
         var animalDiv = $('<div>');
         var p = $('<p>').text("Rating: "+response.data[i].rating);
         var animalImage = $('<img>');
-        animalImage.attr('src',response.data[i].images.fixed_height_still.url);
+        animalImage.attr('src',response.data[i].images.fixed_height.url);
         animalDiv.append(animalImage);
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
 
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
+        renderImages();
       }
+
     })
   // end of gifsClick function
+
   }
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
@@ -69,23 +71,26 @@ $(document).ready(function() {
   */
 
   function renderImages() {
+
     // Gif image click function to switch between still and animate states.
     $("<img>").on("click", function(gifsClick) {
+
       // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
       var state = $(this).attr("data-state");
       // If the clicked image's state is still, update its src attribute to what its data-animate value is.
       // Then, set the image's data-state to animate
       // Else set src to the data-still value
-      if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
-          $(this).attr("data-state", "animate");
+    
+      if (state === "fixed_height") {
+          $(this).attr("src", $(this).attr("data-fixed_height_still"));
+          $(this).attr("data", "fixed_height_still");
       } 
       else {
-          $(this).attr("src", $(this).attr("data-still"));
-          $(this).attr("data-state", "still");
-        }
-      })
-    }
+          $(this).attr("src", $(this).attr("data-fixed_height"));
+          $(this).attr("data", "fixed_height");
+      }
+    })
+  }
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
@@ -96,6 +101,7 @@ $(document).ready(function() {
     // $.val() Get the current value of the first element in the set of matched elements or set the value of every matched element.
     // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
     var topic = $("#topic-input").val().trim();
+
 
     if (topic.length !== 0) {
       // Adding the input from the textbox to our array
@@ -130,7 +136,9 @@ $(document).ready(function() {
       a.text(topics[i]);
       // Adding the button to the topic-view div
       $("#topics-view").append(a);
-    }
+
+    } 
+    
   }
 
   function deleteGifs() {
@@ -139,7 +147,9 @@ $(document).ready(function() {
     })
   }
 
+  // Outputs instructions when a gif button is clicked at beginning load.
   function instructions() {
+    
     $("#instructions").append( "<h2>Click a Gif to Alter its Image State!</h2>" );
   } 
   // Function for displaying the topic info
