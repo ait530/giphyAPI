@@ -31,8 +31,12 @@ $(document).ready(function() {
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
       topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
+
+
+    instructions();
    
     // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal button being clicked
+
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -135,6 +139,9 @@ $(document).ready(function() {
     })
   }
 
+  function instructions() {
+    $("#instructions").append( "<h2>Click a Gif to Alter its Image State!</h2>" );
+  } 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
   $(document).on("click", ".topic", gifsClick);
