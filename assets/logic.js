@@ -82,11 +82,11 @@ $(document).ready(function() {
       // Else set src to the data-still value
     
       if (state === "fixed_height") {
-          $(this).attr("src", $(this).attr("data-fixed_height_still"));
+          $(this).attr("src", $(this).attr("fixed_height_still"));
           $(this).attr("data", "fixed_height_still");
       } 
       else {
-          $(this).attr("src", $(this).attr("data-fixed_height"));
+          $(this).attr("src", $(this).attr("fixed_height"));
           $(this).attr("data", "fixed_height");
       }
     })
