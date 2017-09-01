@@ -86,10 +86,16 @@ $(document).ready(function() {
           $(this).attr("data", "fixed_height_still");
       } 
       else {
-          $(this).attr("src", $(this).attr("fixed_height"));
+          $(this).attr("src", $(this).attr("fixed_height_still"));
           $(this).attr("data", "fixed_height");
       }
     })
+
+    // gifImage.attr('src', results[i].images.fixed_height_still.url)
+    //       .attr('data-state', 'still')
+    //       .attr('data-still', results[i].images.fixed_height_still.url)
+    //       .attr('data-animate', results[i].images.fixed_height.url)
+    //       ;
   }
 
   // This function handles events where one button is clicked
