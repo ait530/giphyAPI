@@ -54,7 +54,12 @@ $(document).ready(function() {
 
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
-        renderImages();
+        //renderImages();
+
+
+        $(animalImage).on("click", function(gifsClick) {
+        alert('You clicked me!');
+        })
       }
 
     })
@@ -70,33 +75,35 @@ $(document).ready(function() {
 
   */
 
-  function renderImages() {
+  // function renderImages() {
 
-    // Gif image click function to switch between still and animate states.
-    $("<img>").on("click", function(gifsClick) {
+  //   // Gif image click function to switch between still and animate states.
+  //   $("<img>").on("click", function(gifsClick) {
 
-      // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-      var state = $(this).attr("data-state");
-      // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-      // Then, set the image's data-state to animate
-      // Else set src to the data-still value
+  //     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+  //     // var state = $(this).attr("data-state");
+  //     alert('You clicked me!');
+  //     // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+  //     // Then, set the image's data-state to animate
+  //     // Else set src to the data-still value
     
-      if (state === "fixed_height") {
-          $(this).attr("src", $(this).attr("fixed_height_still"));
-          $(this).attr("data", "fixed_height_still");
-      } 
-      else {
-          $(this).attr("src", $(this).attr("fixed_height_still"));
-          $(this).attr("data", "fixed_height");
-      }
-    })
+  //   //   if (state === "fixed_height.url") {
+  //   //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
+  //   //       $(this).attr("data", "fixed_height_still.url");
+  //   //   } 
+  //   //   else {
+  //   //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
+  //   //       $(this).attr("data", "fixed_height.url");
+  //   //   }
+  //   // })
 
-    // gifImage.attr('src', results[i].images.fixed_height_still.url)
-    //       .attr('data-state', 'still')
-    //       .attr('data-still', results[i].images.fixed_height_still.url)
-    //       .attr('data-animate', results[i].images.fixed_height.url)
-    //       ;
-  }
+  //   // gifImage.attr('src', results[i].images.fixed_height_still.url)
+  //   //       .attr('data-state', 'still')
+  //   //       .attr('data-still', results[i].images.fixed_height_still.url)
+  //   //       .attr('data-animate', results[i].images.fixed_height.url)
+  //   //       ;
+  //   })
+  // }
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
