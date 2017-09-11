@@ -57,8 +57,25 @@ $(document).ready(function() {
         //renderImages();
 
 
+        // Changes animate state to static
         $(animalImage).on("click", function(gifsClick) {
-        alert('You clicked me!');
+          console.log('You clicked me!');
+            for (var i = 0; i < response.data.length; i++) {
+              var animalDiv = $('<div>');
+              var p = $('<p>').text("Rating: "+response.data[i].rating);
+              var animalImage = $('<img>');
+              animalImage.attr('src',response.data[i].images.fixed_height_still.url);
+              animalDiv.append(animalImage);
+              animalDiv.append(p);
+              $("#gifs-appear-here").prepend(animalDiv);
+            }
+          // $(this).attr("data", "fixed_height_still");
+           
+          // else {
+          //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
+          //   $(this).attr("data", "fixed_height.url");
+          // }
+
         })
       }
 
@@ -87,15 +104,15 @@ $(document).ready(function() {
   //     // Then, set the image's data-state to animate
   //     // Else set src to the data-still value
     
-  //   //   if (state === "fixed_height.url") {
-  //   //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
-  //   //       $(this).attr("data", "fixed_height_still.url");
-  //   //   } 
-  //   //   else {
-  //   //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
-  //   //       $(this).attr("data", "fixed_height.url");
-  //   //   }
-  //   // })
+    //   if (state === "fixed_height.url") {
+    //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
+    //       $(this).attr("data", "fixed_height_still.url");
+    //   } 
+    //   else {
+    //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
+    //       $(this).attr("data", "fixed_height.url");
+    //   }
+    // })
 
   //   // gifImage.attr('src', results[i].images.fixed_height_still.url)
   //   //       .attr('data-state', 'still')
