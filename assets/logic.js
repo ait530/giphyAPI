@@ -55,29 +55,30 @@ $(document).ready(function() {
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
         //renderImages();
-
-
-        // Changes animate state to static
-        $(animalImage).on("click", function(gifsClick) {
-          console.log('You clicked me!');
-            for (var i = 0; i < response.data.length; i++) {
-              var animalDiv = $('<div>');
-              var p = $('<p>').text("Rating: "+response.data[i].rating);
-              var animalImage = $('<img>');
-              animalImage.attr('src',response.data[i].images.fixed_height_still.url);
-              animalDiv.append(animalImage);
-              animalDiv.append(p);
-              $("#gifs-appear-here").prepend(animalDiv);
-            }
-          // $(this).attr("data", "fixed_height_still");
-           
-          // else {
-          //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
-          //   $(this).attr("data", "fixed_height.url");
-          // }
-
-        })
       }
+
+      
+      // Changes animate state to static
+      $(animalImage).on("click", function(gifsClick) {
+        console.log('You clicked me!');
+          for (var i = 0; i < response.data.length; i++) {
+            var animalDiv = $('<div>');
+            var p = $('<p>').text("Rating: "+response.data[i].rating);
+            var animalImage = $('<img>');
+            animalImage.attr('src',response.data[i].images.fixed_height_still.url);
+            animalDiv.append(animalImage);
+            animalDiv.append(p);
+            $("#gifs-appear-here").prepend(animalDiv);
+          }
+        // $(this).attr("data", "fixed_height_still");
+         
+        // else {
+        //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
+        //   $(this).attr("data", "fixed_height.url");
+        // }
+
+      })
+      
 
     })
   // end of gifsClick function
