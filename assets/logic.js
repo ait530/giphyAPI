@@ -4,7 +4,7 @@ $(document).ready(function() {
   // =========================
   // SETUP VARIABLES
   // =========================
-  // Topics variable array of animals to send to api
+  // Initial topics variable array of animals to send to api
   var topics = [
     "dog",
     "cat",
@@ -19,6 +19,7 @@ $(document).ready(function() {
     "pig"
     ];
 
+  instructions();
   // =========================
   // FUNCTIONS
   // =========================
@@ -32,10 +33,7 @@ $(document).ready(function() {
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
       topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
 
-    instructions();
-
     // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal button being clicked
-
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -69,6 +67,7 @@ $(document).ready(function() {
             animalDiv.append(animalImage);
             animalDiv.append(p);
             $("#gifs-appear-here").prepend(animalDiv);
+
           }
         // $(this).attr("data", "fixed_height_still");
          
@@ -180,8 +179,11 @@ $(document).ready(function() {
 
   // Outputs instructions when a gif button is clicked at beginning load.
   function instructions() {
-    
-    $("#instructions").append( "<h2>Click a Gif to Alter its Image State!</h2>" );
+    $("#instructions").append( "<h2>Click a button.</h2>" );
+
+    // if (gifsClick()) {
+    //   $("#instructions").append( "<h2>Click a button YAYYYYY.</h2>" );
+    // }
   } 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
