@@ -1,6 +1,5 @@
 // The ready event occurs when the DOM (document object model) has been loaded.
 $(document).ready(function() {
-
   // =========================
   // SETUP VARIABLES
   // =========================
@@ -24,7 +23,7 @@ $(document).ready(function() {
   // FUNCTIONS
   // =========================
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
-  function gifsClick() {
+  function buttonClick() {
 
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
@@ -53,36 +52,41 @@ $(document).ready(function() {
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
         //renderImages();
-      }
+        imageClick();
+      }    
 
-      
+      function imageClick() {
       // Changes animate state to static
-      $(animalImage).on("click", function(gifsClick) {
-        console.log('You clicked me!');
-          for (var i = 0; i < response.data.length; i++) {
-            var animalDiv = $('<div>');
-            var p = $('<p>').text("Rating: "+response.data[i].rating);
-            var animalImage = $('<img>');
-            animalImage.attr('src',response.data[i].images.fixed_height_still.url);
-            animalDiv.append(animalImage);
-            animalDiv.append(p);
-            $("#gifs-appear-here").prepend(animalDiv);
-
-          }
-        // $(this).attr("data", "fixed_height_still");
-         
-        // else {
-        //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
-        //   $(this).attr("data", "fixed_height.url");
-        // }
+      $(animalImage).on("click", function(buttonClick) {
+      console.log('You clicked me!');
+      for (var i = 0; i < response.data.length; i++) {
+        var animalDiv = $('<div>');
+        var p = $('<p>').text("Rating: "+response.data[i].rating);
+        var animalImage = $('<img>');
+        animalImage.attr('src',response.data[i].images.fixed_height_still.url);
+        animalDiv.append(animalImage);
+        animalDiv.append(p);
+        $("#gifs-appear-here").prepend(animalDiv);
 
       })
-      
-
+    
     })
   // end of gifsClick function
 
   }
+
+  
+    // $(this).attr("data", "fixed_height_still");
+     
+    // else {
+    //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
+    //   $(this).attr("data", "fixed_height.url");
+    // }
+
+  }
+
+
+
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
 
@@ -172,7 +176,7 @@ $(document).ready(function() {
   }
 
   function deleteGifs() {
-    $("delete-topic").on("click", function(gifsClick) {
+    $("delete-topic").on("click", function(buttonClick) {
       $("#gifs-appear-here").empty();
     })
   }
@@ -187,7 +191,7 @@ $(document).ready(function() {
   } 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
-  $(document).on("click", ".topic", gifsClick);
+  $(document).on("click", ".topic", buttonClick);
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
 });
