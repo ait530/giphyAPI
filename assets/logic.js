@@ -24,9 +24,22 @@ $(document).ready(function() {
   // =========================
   // FUNCTIONS
   // =========================
+  
+  // Outputs instructions when a gif button is clicked at beginning load.
+  function instructions() {
+    $("#instructions").append("<h2>Click a button.</h2>");
+    
+  } 
+
+  // Hides instuctions after a button is clicked. 
+  function hideInstructions() {
+    $("#instructions").hide("<h2>Click a button.</h2>");
+  }
+
+
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function buttonClick() {
-
+    hideInstructions();
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
 
@@ -54,33 +67,19 @@ $(document).ready(function() {
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
         //renderImages();
-        // imageClick();
+        imageClick();
       }   
 
-    // function imageClick() {
+    function imageClick() {
     // // Changes animate state to static
-    // $(animalImage).on("click", function(buttonClick) {
-    // console.log('You clicked me!');
-  
-    //   for (var i = 0; i < response.data.length; i++) {
-    //     var animalDiv = $('<div>');
-    //     var p = $('<p>').text("Rating: "+response.data[i].rating);
-    //     var animalImage = $('<img>');
-    //     animalImage.attr('src',response.data[i].images.fixed_height_still.url);
-    //     animalDiv.append(animalImage);
-    //     animalDiv.append(p);
-    //     $("#gifs-appear-here").prepend(animalDiv);
-    //   }
-    // }
-  // end of gifsClick function
+    console.log('You clicked me!');
+    
 
     // $(this).attr("data", "fixed_height_still");
      
     // else {
     //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
     //   $(this).attr("data", "fixed_height.url");
-    })
-  
   }
 
 
@@ -121,7 +120,8 @@ $(document).ready(function() {
   //   //       .attr('data-animate', results[i].images.fixed_height.url)
   //   //       ;
   //   })
-  // }
+  })
+}
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
@@ -177,14 +177,7 @@ $(document).ready(function() {
     })
   }
 
-  // Outputs instructions when a gif button is clicked at beginning load.
-  function instructions() {
-    $("#instructions").append( "<h2>Click a button.</h2>" );
 
-    // if (gifsClick()) {
-    //   $("#instructions").append( "<h2>Click a button YAYYYYY.</h2>" );
-    // }
-  } 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
   $(document).on("click", ".topic", buttonClick);
