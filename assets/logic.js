@@ -16,9 +16,11 @@ $(document).ready(function() {
     "turtle",
     "hedgehog",
     "pig"
-    ];
+  ];
 
   instructions();
+
+
   // =========================
   // FUNCTIONS
   // =========================
@@ -52,39 +54,34 @@ $(document).ready(function() {
         // $("#gifs-appear-here").html(JSON.stringify(response.data));
         // renderButtons();
         //renderImages();
-        imageClick();
-      }    
+        // imageClick();
+      }   
 
-      function imageClick() {
-      // Changes animate state to static
-      $(animalImage).on("click", function(buttonClick) {
-      console.log('You clicked me!');
-      for (var i = 0; i < response.data.length; i++) {
-        var animalDiv = $('<div>');
-        var p = $('<p>').text("Rating: "+response.data[i].rating);
-        var animalImage = $('<img>');
-        animalImage.attr('src',response.data[i].images.fixed_height_still.url);
-        animalDiv.append(animalImage);
-        animalDiv.append(p);
-        $("#gifs-appear-here").prepend(animalDiv);
-
-      })
-    
-    })
+    // function imageClick() {
+    // // Changes animate state to static
+    // $(animalImage).on("click", function(buttonClick) {
+    // console.log('You clicked me!');
+  
+    //   for (var i = 0; i < response.data.length; i++) {
+    //     var animalDiv = $('<div>');
+    //     var p = $('<p>').text("Rating: "+response.data[i].rating);
+    //     var animalImage = $('<img>');
+    //     animalImage.attr('src',response.data[i].images.fixed_height_still.url);
+    //     animalDiv.append(animalImage);
+    //     animalDiv.append(p);
+    //     $("#gifs-appear-here").prepend(animalDiv);
+    //   }
+    // }
   // end of gifsClick function
 
-  }
-
-  
     // $(this).attr("data", "fixed_height_still");
      
     // else {
     //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
     //   $(this).attr("data", "fixed_height.url");
-    // }
-
+    })
+  
   }
-
 
 
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
@@ -170,8 +167,7 @@ $(document).ready(function() {
       a.text(topics[i]);
       // Adding the button to the topic-view div
       $("#topics-view").append(a);
-
-    } 
+    }
     
   }
 
@@ -194,4 +190,5 @@ $(document).ready(function() {
   $(document).on("click", ".topic", buttonClick);
   // Calling the renderButtons function to display the intial buttons
   renderButtons();
+
 });
