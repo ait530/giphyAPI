@@ -17,17 +17,14 @@ $(document).ready(function() {
     "hedgehog",
     "pig"
   ];
-
   instructions();
-
   // =========================
   // FUNCTIONS
   // =========================
-  // Outputs user instructions when a gif button is clicked at beginning load.
+  // Outputs user instructions
   function instructions() {
     $("#instructions").append("<h2>Click an animal button.</h2>");
   } 
-
   // Hides instructions after a button is clicked. 
   function hideInstructions() {
     $("#instructions").hide("<h2>Click a button.</h2>");
@@ -35,17 +32,14 @@ $(document).ready(function() {
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
     hideInstructions();
+    
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
-
     // Giphy URL + string from array + the api key
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
       topics + "&api_key=fd2fb59bff984e64bc8bc3fe62b0ca18&limit=10&rating";
 
-    instructions();
-
-    // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal button being clicked
-
+    // Creating an AJAX (asynchronous HTTP request) calls the giphy API for the specific animal topic button being clicked
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -57,18 +51,14 @@ $(document).ready(function() {
         var animalDiv = $('<div>');
         var p = $('<p>').text("Rating: "+response.data[i].rating);
         var animalImage = $('<img>');
+        
         animalImage.attr('src',response.data[i].images.fixed_height.url);
         animalDiv.append(animalImage);
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
-
-        // $("#gifs-appear-here").html(JSON.stringify(response.data));
-        // renderButtons();
-        //renderImages();
       }
 
-      
-      // Changes animate state to static
+      // Changes animate active state to static
       $(animalImage).on("click", function(gifsClick) {
         console.log('You clicked me!');
           for (var i = 0; i < response.data.length; i++) {
@@ -86,13 +76,8 @@ $(document).ready(function() {
         //   $(this).attr("src", $(this).attr("fixed_height_still.url"));
         //   $(this).attr("data", "fixed_height.url");
         // }
-
       })
-      
-
     })
-  // end of gifsClick function
-
   }
   // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
@@ -102,36 +87,6 @@ $(document).ready(function() {
   2) Add a function that prevents duplicate buttons  
 
   */
-
-  // function renderImages() {
-
-  //   // Gif image click function to switch between still and animate states.
-  //   $("<img>").on("click", function(gifsClick) {
-
-  //     // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-  //     // var state = $(this).attr("data-state");
-  //     alert('You clicked me!');
-  //     // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-  //     // Then, set the image's data-state to animate
-  //     // Else set src to the data-still value
-    
-    //   if (state === "fixed_height.url") {
-    //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
-    //       $(this).attr("data", "fixed_height_still.url");
-    //   } 
-    //   else {
-    //       $(this).attr("src", $(this).attr("fixed_height_still.url"));
-    //       $(this).attr("data", "fixed_height.url");
-    //   }
-    // })
-
-  //   // gifImage.attr('src', results[i].images.fixed_height_still.url)
-  //   //       .attr('data-state', 'still')
-  //   //       .attr('data-still', results[i].images.fixed_height_still.url)
-  //   //       .attr('data-animate', results[i].images.fixed_height.url)
-  //   //       ;
-  //   })
-  // }
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
@@ -143,8 +98,7 @@ $(document).ready(function() {
     // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
     var topic = $("#topic-input").val().trim();
 
-
-    if (topic.length !== 0) {
+    if (topic.length !== 0 && topic.length !==1 && topic.length !==2) {
       // Adding the input from the textbox to our array
       topics.push(topic);
       // console.log(topics);
@@ -178,8 +132,7 @@ $(document).ready(function() {
       // Adding the button to the topic-view div
       $("#topics-view").append(a);
 
-    } 
-    
+    }   
   }
 
   function deleteGifs() {
@@ -188,11 +141,6 @@ $(document).ready(function() {
     })
   }
 
-  // Outputs instructions when a gif button is clicked at beginning load.
-  function instructions() {
-    
-    $("#instructions").append( "<h2>Click a Gif to Alter its Image State!</h2>" );
-  } 
   // Function for displaying the topic info
   // Using $(document).on instead of $(".topic").on to add event listenersto dynamically generated elements
   $(document).on("click", ".topic", gifsClick);
