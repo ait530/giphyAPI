@@ -1,4 +1,4 @@
-// The ready event occurs when the DOM (document object model) has been loaded.
+// The ready event occurs after the DOM (document object model) has been loaded.
 $(document).ready(function() {
   // =========================
   // SETUP VARIABLES
@@ -58,43 +58,30 @@ $(document).ready(function() {
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
 
-        // $("#gifs-appear-here").html(JSON.stringify(response.data));
-        // renderButtons();
-        // clickImage();
-        // imageClick();
-        gifClick();
-      }   
+        $("#gifs-appear-here").on("click", function(event) {
+        // event.preventDefault() prevents the form from trying to submit itself.
+        // We're using a form so that the user can hit enter instead of clicking the button if they want
+        event.preventDefault();
+
+        console.log("you clicked me!")
+        // This line grabs the input from the inputbox
+        // $.val() Get the current value of the first element in the set of matched elements or set the value of every matched element.
+        // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
+        var topic = $("#gifs-appear-here").val().trim();
+          if (topic.length !== 0) {
+            // Adding the input from the textbox to our array
+            topics.push(topic);
+            // console.log(topics);
+          } 
+          else {
+            console.log('error, no topic/string inputted');
+          }
+      })
+
+    }   
     })
   }
-
-  function gifClick() {
-  // This function handles events where one button is clicked
-  $("#gifs-appear-here").on("click", function(event) {
-    // event.preventDefault() prevents the form from trying to submit itself.
-    // We're using a form so that the user can hit enter instead of clicking the button if they want
-    event.preventDefault();
-
-    console.log("you clicked me!")
-    // This line grabs the input from the inputbox
-    // $.val() Get the current value of the first element in the set of matched elements or set the value of every matched element.
-    // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
-    var topic = $("#gifs-appear-here").val().trim();
-
-
-    if (topic.length !== 0) {
-      // Adding the input from the textbox to our array
-      topics.push(topic);
-      // console.log(topics);
-    } 
-    else {
-      console.log('error, no topic/string inputted');
-    }
-    
-    // Calling renderButtons which handles the processing of our topics array
-    renderButtons();
-  })
-  }
-
+  
   // Function for displaying new animal data
   function renderButtons() {
     // Deleting the buttons prior to adding new topics
