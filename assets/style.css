@@ -60,21 +60,27 @@ p {
 }
 
 #gifs-appear-here {
-  float:left;
-  color:white;
-  border-style:black;
+  color: white;
+
 }
 
 #instructions {
   color:white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
 }
 
 .panel-footer {
   background-color:black;
   color:white;
   text-align: center;
+  position:fixed;
+  bottom:0;
+  width:100%;
 }
-
+  
 .container-fluid {
   background-color: gray;
+ 
 }

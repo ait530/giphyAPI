@@ -57,11 +57,11 @@ $(document).ready(function() {
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
       }
-
+3
       // Changes animate active state to static
       $(animalImage).on("click", function(gifsClick) {
         console.log('You clicked me!');
-          for (var i = 0; i < response.data.length; i++) {
+        for (var i = 0; i < response.data.length; i++) {
             var animalDiv = $('<div>');
             var p = $('<p>').text("Rating: "+response.data[i].rating);
             var animalImage = $('<img>');
@@ -69,7 +69,7 @@ $(document).ready(function() {
             animalDiv.append(animalImage);
             animalDiv.append(p);
             $("#gifs-appear-here").prepend(animalDiv);
-          }
+        }
         // $(this).attr("data", "fixed_height_still");
          
         // else {
