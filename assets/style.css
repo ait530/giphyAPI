@@ -29,8 +29,9 @@ p {
   border-color: black;
   background-color: black;
   color:white;
-  border-radius:10px;
-  margin-right: 10px;
+  border-radius:8px;
+  margin-right: 20px;
+  font-size: 20px;
 }
 
 #topics-view {
