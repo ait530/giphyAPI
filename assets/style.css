@@ -61,7 +61,9 @@ p {
 }
 
 #gifs-appear-here {
-  color: white;
+  color: white; 
+  margin-left: 500px;
+
 
 }
 

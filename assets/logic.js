@@ -57,7 +57,7 @@ $(document).ready(function() {
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
       }
-3
+
       // Changes animate active state to static
       $(animalImage).on("click", function(gifsClick) {
         console.log('You clicked me!');
