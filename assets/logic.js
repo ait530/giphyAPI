@@ -29,9 +29,16 @@ $(document).ready(function() {
   function hideInstructions() {
     $("#instructions").hide("<h2>Click a button.</h2>");
   }
+
+  // shows clickGifsPrompt
+  function clickGifsPrompt() {
+    $("#topics-view").append("<h2>Click an animal gif to alter its state!</h2>");
+  }
+ 
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
     hideInstructions();
+    clickGifsPrompt();
     
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
@@ -48,6 +55,7 @@ $(document).ready(function() {
       // For each index in topics array, set an animalDIV, p element, and a animal image div. For the animal image, set the src to the data response from the server for each animal and give the images a fixed height.
       //Append: Insert content, specified by the parameter, to the end of each element in the set of matched elements. In this case, append the p element and animalImage to the animalDiv. Then, insert this content to the desired HTML div for the gifs to appear, thus #gifs-appear-here. 
       for (var i = 0; i < response.data.length; i++) {
+        
         var animalDiv = $('<div>');
         var p = $('<p>').text("Rating: "+response.data[i].rating);
         var animalImage = $('<img>');
@@ -56,7 +64,10 @@ $(document).ready(function() {
         animalDiv.append(animalImage);
         animalDiv.append(p);
         $("#gifs-appear-here").prepend(animalDiv);
+
       }
+
+      
 
       // Changes animate active state to static
       $(animalImage).on("click", function(gifsClick) {
@@ -79,14 +90,8 @@ $(document).ready(function() {
       })
     })
   }
-  // I would probably create a function called renderImages() and pass the ajax response to it for the work being done at lines 46-57
 
-
-  /*
-  1) NEED To Fix render images function
-  2) Add a function that prevents duplicate buttons  
-
-  */
+ 
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
@@ -97,6 +102,7 @@ $(document).ready(function() {
     // $.val() Get the current value of the first element in the set of matched elements or set the value of every matched element.
     // $.trim() function removes all newlines, spaces (including non-breaking spaces), and tabs from the beginning and end of the supplied string. If these whitespace characters occur in the middle of the string, they are preserved.
     var topic = $("#topic-input").val().trim();
+
 
     if (topic.length !== 0 && topic.length !==1 && topic.length !==2) {
       // Adding the input from the textbox to our array
@@ -138,6 +144,7 @@ $(document).ready(function() {
   function deleteGifs() {
     $("delete-topic").on("click", function(gifsClick) {
       $("#gifs-appear-here").empty();
+
     })
   }
 
