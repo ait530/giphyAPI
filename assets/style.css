@@ -35,7 +35,8 @@ p {
 }
 
 #topics-view {
-  margin-bottom:50px;: 
+  margin-bottom:50px;
+  float:left;
 }
 
 #topic-form {
@@ -62,7 +63,8 @@ p {
 
 #gifs-appear-here {
   color: white; 
-  margin-left: 500px;
+  text-align:center;
+  margin: 0px auto 0px auto;
 
 
 }
@@ -72,6 +74,7 @@ p {
   text-align: center;
   vertical-align: middle;
   line-height: 90px;
+  float:left;
 }
 
 .panel-footer {
