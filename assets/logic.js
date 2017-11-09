@@ -38,7 +38,8 @@ $(document).ready(function() {
   // Function for dumping JSON content for each button into the div and displaying gifs when clicked.
   function gifsClick() {
     hideInstructions();
-    clickGifsPrompt();
+    clickGifsPrompt;
+   
     
     // Setting attribute with name "data-name" to variable topics
     var topics = $(this).attr("data-name");
