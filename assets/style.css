@@ -1,93 +1,73 @@
-
-
 body {
-  background-color: gray;
+background-color: gray;
 }
-
 p {
-  font-family: times;
-  font-size: 25px;
+font-family: times;
+font-size: 25px;
 }
-
 .jumbotron {
-  background-color:green;
-  color:white;
+background-color:green;
+color:white;
 }
-
 .fore-group {
-  color:white;
+color:white;
 }
-
 #add-topic
 {
-  border-color: teal;
-  background-color:teal;
-  color:white;
+border-color: teal;
+background-color:teal;
+color:white;
 }
-
 .topic {
-  border-color: black;
-  background-color: black;
-  color:white;
-  border-radius:8px;
-  margin-right: 20px;
-  font-size: 20px;
+border-color: black;
+background-color: black;
+color:white;
+border-radius:8px;
+margin-right: 20px;
+font-size: 20px;
 }
-
 #topics-view {
-  margin-bottom:50px;
-  float:left;
-  color:white;
+margin-bottom:50px;
+float:left;
+color:white;
 }
-
 #topic-form {
-  height:100px;
-  float: right;
-  margin-top: 25px;
-  font-size:30px;
+height:100px;
+float: right;
+margin-top: 25px;
+font-size:30px;
 }
-
 /*#topic-input {
-  width:300px;
+width:300px;
 }*/
-
 #add-topic {
-  border-radius:20px;
+border-radius:20px;
 }
-
 #delete-topic {
-  border-radius:20pX;
-  border-color:red;
-  background-color:red;
-  color:white;
+border-radius:20pX;
+border-color:red;
+background-color:red;
+color:white;
 }
-
 #gifs-appear-here {
-  color: white; 
-  text-align:center;
-  margin: 0px auto 0px auto;
-
-
+color: white;
+text-align:center;
+margin: 0px auto 0px auto;
 }
-
 #instructions {
-  color:white;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 90px;
-  float:left;
+color:white;
+text-align: right;
+vertical-align: middle;
+float:left;
 }
-
 .panel-footer {
-  background-color:black;
-  color:white;
-  text-align: center;
-  position:fixed;
-  bottom:0;
-  width:100%;
+background-color:black;
+color:white;
+text-align: center;
+position:fixed;
+bottom:0;
+width:100%;
 }
-  
 .container-fluid {
-  background-color: gray;
- 
+background-color: gray;
 }
