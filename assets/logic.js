@@ -27,7 +27,7 @@ $(document).ready(function() {
   } 
   // Hides instructions after a button is clicked. 
   function hideInstructions() {
-    $("#instructions").hide("<h2>Click a button.</h2>");
+    $("#instructions").fadeOut("slow");
   }
 
   // shows clickGifsPrompt
@@ -68,8 +68,6 @@ $(document).ready(function() {
 
       }
 
-      
-
       // Changes animate active state to static
       $(animalImage).on("click", function(gifsClick) {
         console.log('You clicked me!');
@@ -92,7 +90,6 @@ $(document).ready(function() {
     })
   }
 
- 
 
   // This function handles events where one button is clicked
   $("#add-topic").on("click", function(event) {
