@@ -69,8 +69,9 @@ $(document).ready(function() {
       }
 
       // Changes animate active state to static
-      $(animalImage).on("click", function(gifsClick) {
+      $("#gifs-appear-here").on("click", function(gifsClick) {
         console.log('You clicked me!');
+        $("#gifs-appear-here").empty(animalDiv);
         for (var i = 0; i < response.data.length; i++) {
             var animalDiv = $('<div>');
             var p = $('<p>').text("Rating: "+response.data[i].rating);
