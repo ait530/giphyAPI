@@ -23,9 +23,25 @@ border-color: black;
 background-color: black;
 color:white;
 border-radius:8px;
-margin-right: 20px;
-font-size: 20px;
+margin-right: 40px;
+margin-top: 30px;
+font-size: 10px;
+padding: 15px 25px;
+font-size: 24px;
+text-align: center;
+cursor: pointer;
+outline: none;
+border: none;
+box-shadow: 0 9px #999;
 }
+
+.topic:hover {background-color: #f90707}
+  
+.topic:active {
+    background-color: ;
+    box-shadow: 0 5px yellow;
+    transform: translateY(4px);
+  }
 
 #topics-view {
 margin-bottom:50px;
@@ -59,9 +75,8 @@ margin-bottom: 50px;
 }
 #instructions {
 color:white;
-text-align: right;
+text-align: center;
 vertical-align: middle;
-float:left;
 }
 .panel-footer {
 background-color:black;
