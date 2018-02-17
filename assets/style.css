@@ -9,6 +9,9 @@ font-size: 25px;
 background-color:green;
 color:white;
 }
+.navbar-form {
+color:white;
+}
 .fore-group {
 color:white;
 }
@@ -38,16 +41,15 @@ box-shadow: 0 9px #999;
 .topic:hover {background-color: #f90707}
   
 .topic:active {
-    background-color: ;
-    box-shadow: 0 5px yellow;
-    transform: translateY(4px);
-  }
-
+background-color: ;
+box-shadow: 0 5px yellow;
+transform: translateY(4px);
+}
 #topics-view {
 margin-bottom:50px;
-float:left;
 color:white;
 width:100%;
+margin:20px;
 }
 #topic-form {
 height:100px;
@@ -55,9 +57,9 @@ float: right;
 margin-top: 25px;
 font-size:30px;
 }
-/*#topic-input {
-width:300px;
-}*/
+#topic-input {
+color:black;
+}
 #add-topic {
 border-radius:20px;
 }
@@ -70,7 +72,7 @@ color:white;
 #gifs-appear-here {
 color: white;
 text-align:center;
-margin: 0px auto 0px auto;
+margin: 10px auto 0px auto;
 margin-bottom: 50px;
 }
 #instructions {
