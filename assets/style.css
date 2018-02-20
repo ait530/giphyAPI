@@ -27,6 +27,8 @@ color:white;
 border-color: teal;
 background-color:teal;
 color:white;
+width: 10em;
+height: 2em;
 }
 .topic {
 border-color: black;
@@ -48,7 +50,6 @@ box-shadow: 0 9px #999;
 .topic:hover {background-color: #f90707}
   
 .topic:active {
-background-color: ;
 box-shadow: 0 5px yellow;
 transform: translateY(4px);
 }
@@ -77,6 +78,8 @@ border-radius:20pX;
 border-color:red;
 background-color:red;
 color:white;
+width: 10em;
+height: 2em;
 }
 #gifs-appear-here {
 color: white;
