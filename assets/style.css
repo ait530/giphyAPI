@@ -1,105 +1,122 @@
 body {
-background-color: gray;
-}
-p {
-font-family: times;
-font-size: 25px;
-}
-.jumbotron {
-background-color:green;
-color:white;
-}
-.navbar-form {
-color:white;
+    background-color: gray;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+p {
+    font-family: times;
+    font-size: 25px;
+}
+
+.jumbotron {
+    background-color: green;
+    color: white;
+}
+
+.navbar-form {
+    color: white;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
     border-color: #101010;
     position: relative;
     width: 100%;
     text-align: center;
 }
+
 .fore-group {
-color:white;
-}
-#add-topic
-{
-border-color: teal;
-background-color:teal;
-color:white;
-width: 10em;
-height: 2em;
-}
-.topic {
-border-color: black;
-background-color: black;
-color:white;
-border-radius:8px;
-margin-right: 40px;
-margin-top: 30px;
-font-size: 10px;
-padding: 15px 25px;
-font-size: 24px;
-text-align: center;
-cursor: pointer;
-outline: none;
-border: none;
-box-shadow: 0 9px #999;
+    color: white;
 }
 
-.topic:hover {background-color: #f90707}
-  
-.topic:active {
-box-shadow: 0 5px yellow;
-transform: translateY(4px);
-}
-#topics-view {
-margin-bottom:50px;
-color:white;
-width:100%;
-margin:20px;
-}
-#topic-form {
-height:100px;
-float: right;
-margin-top: 25px;
-font-size:30px;
-}
-#topic-input {
-color:black;
-padding:20px;
-font-size: large;
-}
 #add-topic {
-border-radius:20px;
+    border-color: teal;
+    background-color: teal;
+    color: white;
+    width: 10em;
+    height: 2em;
 }
+
+.topic {
+    border-color: black;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    margin-right: 40px;
+    margin-top: 30px;
+    font-size: 10px;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    box-shadow: 0 9px #999;
+}
+
+.topic:hover {
+    background-color: #f90707
+}
+
+.topic:active {
+    box-shadow: 0 5px yellow;
+    transform: translateY(4px);
+}
+
+#topics-view {
+    margin-bottom: 50px;
+    color: white;
+    width: 100%;
+    margin: 20px;
+}
+
+#topic-form {
+    height: 100px;
+    float: right;
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+#topic-input {
+    color: black;
+    padding: 20px;
+    font-size: large;
+}
+
+#add-topic {
+    border-radius: 20px;
+}
+
 #delete-topic {
-border-radius:20pX;
-border-color:red;
-background-color:red;
-color:white;
-width: 10em;
-height: 2em;
+    border-radius: 20pX;
+    border-color: red;
+    background-color: red;
+    color: white;
+    width: 10em;
+    height: 2em;
 }
+
 #gifs-appear-here {
-color: white;
-text-align:center;
-margin: 10px auto 0px auto;
-margin-bottom: 50px;
+    color: white;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    margin-bottom: 50px;
 }
+
 #instructions {
-color:white;
-text-align: center;
-vertical-align: middle;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
 }
+
 .panel-footer {
-background-color:black;
-color:white;
-text-align: center;
-position:fixed;
-bottom:0;
-width:100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
 .container-fluid {
-background-color: gray;
+    background-color: gray;
 }

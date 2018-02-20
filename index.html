@@ -1,59 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Animals Gifs</title>
     <meta charset="utf-8"></meta>
     <!-- Bootstrap CDN-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- CSS CDN-->
-    <link rel="stylesheet" href= "assets/style.css"></link>
-  </head>
-  <body>
+    <link rel="stylesheet" href="assets/style.css"></link>
+</head>
+
+<body>
     <!-- Contains all elements -->
     <div class="container-fluid">
-      <nav class="navbar navbar-inverse">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          
-          <!-- Input area + input box + input label + submit button -->
-          <form class="navbar-form navbar-left">
-            <h1>Animal Gifs Generator</h1>
-            <div class="input-box"></div>
-              <!-- input box -->
-              <input type="text" id="topic-input" style="width: 350px;" placeholder="Input an animal of your choice here"><br><br>  </input>
-              <!-- Button triggers new topic(animal button) to be added -->
-              <input id="add-topic" type="submit" value="Add Gifs"></input>
-              <input id="delete-topic" type="submit" value="Reset Gifs"></input>
+        <nav class="navbar navbar-inverse">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-          </form>
-          </div><!-- /.navbar-collapse -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Input area + input box + input label + submit button -->
+                <form class="navbar-form navbar-left">
+                    <h1>Animal Gifs Generator</h1>
+                    <div class="input-box"></div>
+                    <!-- input box -->
+                    <input type="text" id="topic-input" style="width: 350px;" placeholder="Input an animal of your choice here">
+                    <br>
+                    <br> </input>
+                    <!-- Button triggers new topic(animal button) to be added -->
+                    <input id="add-topic" type="submit" value="Add Gifs"></input>
+                    <input id="delete-topic" type="submit" value="Reset Gifs"></input>
+            </div>
+            </form>
+    </div>
+    <!-- /.navbar-collapse -->
+    <!-- Animal/topic buttons located here -->
+    <div id="topics-view"></div>
+    <!-- Gifs displayed here -->
+    <div id="gifs-appear-here"></div>
+    <!-- Click Gif Instruction -->
+    <div id="instructions"></div>
+    </div>
+    <div class="panel-footer">&#169; Copyright 2017 Aaron Trierweiler</div>
+    </nav>
+    <!-- jQuery  -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- JavaScript: external Logic.js link -->
+    <script type="text/javascript" src="assets/logic.js"></script>
+</body>
 
-          <!-- Animal/topic buttons located here -->
-          <div id="topics-view"></div>
-          <!-- Gifs displayed here -->
-          <div id="gifs-appear-here"></div>
-          <!-- Click Gif Instruction -->
-          <div id="instructions"></div>
-        </div>
-      
-      <div class="panel-footer">&#169; Copyright 2017 Aaron Trierweiler</div>
-        </nav>
-      <!-- jQuery  -->
-      <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-      <!-- JavaScript: external Logic.js link -->
-      <script type="text/javascript"
-      src="assets/logic.js"></script>
-    </body>
-  </html>
+</html>
